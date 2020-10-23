@@ -1,157 +1,20 @@
 {
-    "name": "monofony/monofony",
-    "description": "Starter project for Symfony projects",
+    "name": "monofony/core",
+    "type": "library",
+    "description": "Monofony core.",
     "license": "MIT",
-    "type": "project",
-    "autoload": {
-        "psr-4": {
-            "App\\": "src/",
-            "Monofony\\Bridge\\": "src/Monofony/Bridge/",
-            "Monofony\\Bundle\\": "src/Monofony/Bundle/",
-            "Monofony\\Component\\": "src/Monofony/Component/",
-            "Monofony\\Contracts\\": "src/Monofony/Contracts/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "App\\Collector\\": "src/Monofony/Pack/CorePack/.recipe/src/Collector/",
-            "App\\Context\\": "src/Monofony/Pack/CorePack/.recipe/src/Context/",
-            "App\\Command\\": "src/Monofony/Pack/CorePack/.recipe/src/Command/",
-            "App\\Dashboard\\": "src/Monofony/Pack/AdminPack/.recipe/src/Dashboard/",
-            "App\\Entity\\": "src/Monofony/Pack/CorePack/.recipe/src/Entity/",
-            "App\\EventListener\\": "src/Monofony/Pack/CorePack/.recipe/src/EventListener/",
-            "App\\EventSubscriber\\": "src/Monofony/Pack/CorePack/.recipe/src/EventSubscriber/",
-            "App\\Fixture\\": "src/Monofony/Pack/FixturesPack/.recipe/src/Fixture/",
-            "App\\Form\\": "src/Monofony/Pack/CorePack/.recipe/src/Form/",
-            "App\\Formatter\\": "src/Monofony/Pack/CorePack/.recipe/src/Formatter/",
-            "App\\Installer\\": "src/Monofony/Pack/CorePack/.recipe/src/Installer/",
-            "App\\Installer\\Checker\\": "src/Monofony/Pack/CorePack/.recipe/src/Installer/Checker/",
-            "App\\Message\\": "src/Monofony/Pack/ApiPack/.recipe/src/Message/",
-            "App\\MessageHandler\\": "src/Monofony/Pack/ApiPack/.recipe/src/MessageHandler/",
-            "App\\Migrations\\": "src/Monofony/Pack/CorePack/.recipe/src/Migrations/",
-            "App\\Provider\\": "src/Monofony/Pack/ApiPack/.recipe/src/Provider/",
-            "App\\Repository\\": "src/Monofony/Pack/CorePack/.recipe/src/Repository/",
-            "App\\Tests\\": "tests/",
-            "App\\Validator\\": "src/Monofony/Pack/CorePack/.recipe/src/Validator/",
-            "App\\Tests\\Behat\\": "src/Monofony/Pack/CorePack/.recipe/tests/Behat/",
-            "App\\Tests\\Behat\\Behaviour\\": "src/Monofony/Pack/CorePack/.recipe/tests/Behat/Behaviour/",
-            "App\\Tests\\Behat\\Context\\Cli\\": "src/Monofony/Pack/CorePack/.recipe/tests/Behat/Context/Cli/",
-            "App\\Tests\\Behat\\Context\\Hook\\": "src/Monofony/Pack/CorePack/.recipe/tests/Behat/Context/Hook/",
-            "App\\Tests\\Behat\\Context\\Setup\\": "src/Monofony/Pack/CorePack/.recipe/tests/Behat/Context/Setup/",
-            "App\\Tests\\Behat\\Context\\Transform\\": "src/Monofony/Pack/CorePack/.recipe/tests/Behat/Context/Transform/",
-            "App\\Tests\\Behat\\Context\\Ui\\": "src/Monofony/Pack/CorePack/.recipe/tests/Behat/Context/Ui/",
-            "App\\Tests\\Behat\\Context\\Ui\\Backend\\": "src/Monofony/Pack/AdminPack/.recipe/tests/Behat/Context/Ui/Backend/",
-            "App\\Tests\\Behat\\Context\\Ui\\Frontend\\": "src/Monofony/Pack/FrontPack/.recipe/tests/Behat/Context/Ui/Frontend/",
-            "App\\Tests\\Behat\\Element\\Backend\\": "src/Monofony/Pack/AdminPack/.recipe/tests/Behat/Element/Backend/",
-            "App\\Tests\\Behat\\Page\\Backend\\": "src/Monofony/Pack/AdminPack/.recipe/tests/Behat/Page/Backend/",
-            "App\\Tests\\Behat\\Exception\\": "src/Monofony/Pack/CorePack/.recipe/tests/Behat/Exception/",
-            "App\\Tests\\Behat\\Page\\Frontend\\": "src/Monofony/Pack/FrontPack/.recipe/tests/Behat/Page/Frontend/",
-            "App\\Tests\\Behat\\Service\\": "src/Monofony/Pack/CorePack/.recipe/tests/Behat/Service/",
-            "App\\Tests\\Controller\\": "src/Monofony/Pack/ApiPack/.recipe/tests/Controller/"
-        },
-        "classmap": [
-            "src/Monofony/Pack/AdminPack/.recipe/src/Controller/DashboardController.php",
-            "src/Monofony/Pack/AdminPack/.recipe/src/Menu/AdminMenuBuilder.php",
-            "src/Monofony/Pack/FrontPack/.recipe/src/Menu/AccountMenuBuilder.php",
-            "src/Monofony/Pack/FixturesPack/.recipe/src/Command/Installer/InstallSampleDataCommand.php"
-        ]
-    },
     "require": {
-        "php": ">=7.3",
-        "api-platform/api-pack": "^1.2",
-        "doctrine/doctrine-bundle": "^1.6",
-        "doctrine/doctrine-fixtures-bundle": "^2.3",
-        "doctrine/doctrine-migrations-bundle": "^2.0",
-        "doctrine/orm": "^2.4.8",
-        "eightpoints/guzzle-bundle": "^7.3",
-        "friendsofsymfony/oauth-server-bundle": "^1.6",
-        "fzaninotto/faker": "^1.8",
-        "guzzlehttp/guzzle": "^6.2",
-        "knplabs/doctrine-behaviors": "~1.1",
-        "liip/imagine-bundle": "^2.2",
-        "sensio/framework-extra-bundle": "^5.1",
-        "sensiolabs/security-checker": "^5.0",
-        "sonata-project/block-bundle": "^3.3",
-        "sylius/customer-bundle": "^1.6",
-        "sylius/fixtures-bundle": "^1.4",
-        "sylius/grid-bundle": "^1.6",
-        "sylius/mailer-bundle": "^1.4",
-        "sylius/resource-bundle": "^1.6",
-        "sylius/ui-bundle": "^1.6",
-        "sylius/user-bundle": "^1.6",
-        "symfony/dotenv": "4.4.*",
-        "symfony/flex": "^1.2",
-        "symfony/messenger": "^4.4 || ^5.1",
-        "symfony/monolog-bundle": "^3.3",
-        "symfony/polyfill-php80": "^1.15",
-        "symfony/proxy-manager-bridge": "4.4.*",
-        "symfony/swiftmailer-bundle": "^3.0",
-        "symfony/twig-bundle": "4.4.*",
-        "symfony/webpack-encore-bundle": "^1.6",
-        "twig/extensions": "^1.5",
-        "twig/twig": "^2.7",
-        "vich/uploader-bundle": "^1.8"
+        "php": ">=7.3"
     },
     "require-dev": {
-        "behat/behat": "^3.2",
-        "behat/mink-browserkit-driver": "^1.3",
-        "behat/mink-selenium2-driver": "^1.3",
-        "friends-of-behat/mink": "^1.8",
-        "friends-of-behat/mink-extension": "^2.4",
-        "friends-of-behat/page-object-extension": "^0.3",
-        "friends-of-behat/suite-settings-extension": "^1.0",
-        "friends-of-behat/symfony-extension": "^2.0",
-        "friends-of-behat/variadic-extension": "^1.1",
-        "friends-of-phpspec/phpspec-code-coverage": "^4.3",
-        "friendsofphp/php-cs-fixer": "^2.13",
-        "infection/infection": "^0.13",
-        "lakion/mink-debug-extension": "^1.2",
-        "lchrusciel/api-test-case": "^3.1",
-        "phpspec/phpspec": "^6.2",
-        "phpstan/phpstan": "^0.12",
-        "phpstan/phpstan-doctrine": "^0.12",
-        "phpstan/phpstan-nette": "^0.12",
-        "phpstan/phpstan-symfony": "^0.12",
-        "phpstan/phpstan-webmozart-assert": "^0.12",
-        "psr/event-dispatcher": "^1.0",
-        "se/selenium-server-standalone": " ^2.52",
-        "symfony/debug-bundle": "4.4.*",
-        "symfony/web-profiler-bundle": "4.4.*",
-        "symplify/easy-coding-standard": "^6.0||^7.0",
-        "symplify/monorepo-builder": "^7.0",
-        "vimeo/psalm": "^3.16"
+        "phpstan/phpstan": "^0.12"
     },
-    "conflict": {
-        "symfony/symfony": "*",
-        "symplify/package-builder": "^7.2",
-        "symplify/smart-file-system": "^7.2",
-        "symplify/monorepo-builder": "^7.2"
-    },
-    "scripts": {
-        "auto-scripts": {
-            "cache:clear": "symfony-cmd",
-            "assets:install %PUBLIC_DIR%": "symfony-cmd",
-            "security-checker security:check": "script"
-        },
-        "fix": [
-            "@php vendor/bin/ecs check src --fix"
-        ],
-        "post-install-cmd": [
-            "@auto-scripts"
-        ],
-        "post-update-cmd": [
-            "@auto-scripts"
-        ]
-    },
-    "config": {
-        "sort-packages": true
-    },
-    "extra": {
-        "symfony": {
-            "allow-contrib": true,
-            "require": "4.4.*"
-        }
+    "autoload": {
+        "psr-4": { "Monofony\\Component\\Core\\": "" }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "extra": {
+        "branch-version": "0.4"
+    }
 }

@@ -1,6 +1,0 @@
-parameters:
-    paths:
-        - .recipe
-    excludes_analyse:
-        - 'vendor/**.php'
-        - '**/spec/**.php'

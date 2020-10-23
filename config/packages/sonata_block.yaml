@@ -1,8 +1,0 @@
-sonata_block:
-    blocks:
-        sonata.block.service.template:
-            settings:
-                customer: ~
-                form: ~
-                resource: ~
-                resources: ~

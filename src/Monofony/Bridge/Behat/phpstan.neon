@@ -1,5 +1,0 @@
-parameters:
-    paths:
-        - ./
-    excludes_analyse:
-        - 'vendor/**.php'
